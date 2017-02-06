@@ -1,7 +1,7 @@
 什么是Zipalign？
 http://bbs.ihei5.com/thread-171596-1-1.html
 
-PNG图片优化压缩的文章：
+  PNG图片优化压缩的文章：
   http://www.wufangbo.com/png-image-optimization/ 
 
 

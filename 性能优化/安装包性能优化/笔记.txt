@@ -31,6 +31,13 @@
    b.可以将Java文件，变量，方法名改成短名 ： CommonUtils.java ----> a.java  getDataFromData() ----> b();
 
 
-   ======================在常规安装包优化以外在优化---资源在压缩========================================
+======================在常规安装包优化以外在优化---资源在压缩========================================
+  资源“混淆”
+  resources.arsc  ；资源文件的描述  （R.java 文件 与 资源文件的对应关系等）
 
+  将资源文件改成短名：
+    res/drawable/home_title_select.png ---->   a.png
 
+   更夸张一些：
+   res/drawable --->  r/d
+   res/layout ----> r/l     eg: res/drawable/home_title_select.png ---->   r/d/a.png
