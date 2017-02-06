@@ -1,0 +1,32 @@
+======================安装包的性能优化===================
+减少apk的大小（一个字 删 删不掉尽可能小）  提高应用的运行速率
+
+1.图片压缩
+    压缩apk中的图片
+    a. png 通过无损压缩工具压缩 ：https://tinypng.com/
+    b. svg 一些图片的描述 会占用CPU计算能力 空间小（用时间换空间）
+       使用原则：一些简单的图片
+    c.矢量图（as）: 能够自动屏幕适配 
+            android:viewportWidth="12.0" ： 将宽度分割成多少份
+            android:viewportHeight="24.0"
+    d. webP : 谷歌官网推荐使用的 : 缺会点 ：加载慢些  但是现在手机配置很高
+
+2.资源动态加载：
+  插件化开发：类加载器 ClassLoader(抽象类)  （PathClassLoader DexClassLoader）
+
+   eg: 皮肤 ；表情 
+   一些模块的动态加载 
+
+3.Lint工具 :检测建议优化的点
+   a.检测没有用到的布局，图片等：删除
+   b.String.xml 文件中没有用到的字符
+   c.也可以检测内存泄漏
+
+4.极限压缩
+ 使用7zip工具
+
+ 5.Proguard(混淆)
+   可以减少apk的大小 防止反编译 ： 为什么呢？
+   a. 可以删除注释和不用的代码
+   b.可以将Java文件，变量，方法名改成短名 ： CommonUtils.java ----> a.java  getDataFromData() ----> b();
+
